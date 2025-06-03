@@ -7,7 +7,10 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors({ origin: '*' }));
+app.use(cors({
+  origin: 'frontend-eta-eight-54.vercel.app',
+  credentials: true,
+}));
 app.use(express.json());
 app.use(passport.initialize()); // ⬅️ Initialize passport
 
