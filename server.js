@@ -8,7 +8,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'frontend-eta-eight-54.vercel.app',
+  origin: 'https://frontend-eta-eight-54.vercel.app',
   credentials: true,
 }));
 app.use(express.json());
