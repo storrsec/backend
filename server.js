@@ -8,10 +8,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://frontend-eta-eight-54.vercel.app',
-  credentials: true,
+  origin: 'https://frontend-eta-eight-54.vercel.app', // allow your frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true, 
 }));
-app.use(cors());
 app.use(express.json());
 app.use(passport.initialize()); // ⬅️ Initialize passport
 
