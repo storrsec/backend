@@ -11,6 +11,7 @@ app.use(cors({
   origin: 'https://frontend-eta-eight-54.vercel.app',
   credentials: true,
 }));
+app.use(cors());
 app.use(express.json());
 app.use(passport.initialize()); // ⬅️ Initialize passport
 
