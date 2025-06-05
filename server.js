@@ -8,15 +8,14 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://frontend-eta-eight-54.vercel.app', // or '*' for dev
+  origin: 'https://www.storrsec.com', // ALLOW this specific frontend domain
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  credentials: true // if you use cookies or auth headers
 }));
 
 app.use(express.json());
-
-app.options('*', cors());
+app.options('*', cors()); // handle preflight
 app.use(passport.initialize()); // ⬅️ Initialize passport
 
 // MongoDB connection
